@@ -23,9 +23,20 @@
         background: linear-gradient(to bottom, #acd4ff, #4293fc);
         color: #fff;
         border-radius: 5px;
+        cursor: pointer;
         /* outline: 5px solid #4293fc;
         margin: 5px; */
       }
+      /* 激活按钮伪类选择器 */
+      .btn:active {
+        /* text-shadow: 0 0 0 5px #fff, 0 0 0 3px #4293fc; */
+
+        /* 用多个盒子阴影，而不是外边框和文字阴影 */
+        box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4293fc;
+      }
+      /* body {
+        background-color: #000;
+      } */
     </style>
   </head>
   <body>

@@ -17,13 +17,17 @@
       /* 在这里完成作业 */
       .box {
         border-radius: 50%;
-        box-shadow: inset 0 0 100px rgba(255,255,255),
-        0 0 200px rgba(0, 0, 0, .5);
+        /* box-shadow: 0 0 10px rgba(255, 255, 255), 0 0 100px rgba(0, 0, 0, 0.8); */
+        /* 第三个参数：阴影的模糊半径，该值越大，模糊的范围就越大 */
+        /* 还有第四个参数：阴影扩散*/
+        box-shadow: 0 0 5px 10px rgba(255, 255, 255), 0 0 30px 20px rgba(0, 0, 0, 0.5);
       }
+      /* body {
+        background-color: #000;
+      } */
     </style>
   </head>
   <body>
     <img class="box" src="./doge.jpeg" />
   </body>
 </html>
-

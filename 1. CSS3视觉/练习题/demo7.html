@@ -18,17 +18,24 @@
       /* 在这里完成作业 */
       .box {
         border: 100px solid transparent;
-        /* border-color: transparent  transparent transparent  #579ef8; */
-        border-left-color: #579ef8;
-        /* transform: rotate(90deg) translateX(-280px);
-         */
-        transform-origin: left top;
-        position: fixed;
+        /* 宽高设为0，就不会独占一行 */
+        width: 0;
+        height: 0;
+        /* border-color: red green #579ef8 blue; */
+        border-bottom-color: #579ef8;
+
+        /* position: fixed;
         top: 50%;
-        left: 50%;
-         transform: translate(50%, 50%) rotate(-90deg);
+        left: 50%; */
       }
       .box:hover {
+         /* 默认情况下，变形的原点在盒子中心，可以通过transform-origin来改变它 */
+         /* 需要把变形的原点改为三角形的中心：
+         1. 左边：整个宽度200px的一半，为100px；或者直接写center
+         2. 上边：一个边框100px，加上边框的一半50px，共150px
+         */
+        /* transform-origin: 100px 150px; */
+        transform-origin: center 150px;
         transform: rotate(0.5turn);
       }
     </style>
