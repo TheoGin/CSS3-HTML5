@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* 过渡属性：若填写all或不填写，则表示针对所有css属性都应用过渡 */
+        transition: all 500ms ease-in-out 1s;
+        /* 最后一个时间表示过渡延迟 */
+
+        /* 在控制台随意调整曲线，过渡函数就会变成贝塞尔曲线 */
+        /* transition: all 500ms cubic-bezier(0, 1.19, 1, -0.39) 1s; */
+      }
+
+      .box:hover {
+        width: 200px;
+        height: 200px;
+        background-color: #008c8c;
+        /* 不要写在这，因为这里只有hover才有过渡，离开就没有过渡了 */
+        /* transition: all 1s; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

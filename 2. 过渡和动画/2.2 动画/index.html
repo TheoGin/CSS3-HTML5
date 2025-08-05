@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .box:hover {
+        /* animation: 规则名 持续时间 重复次数 时间函数 动画方向 延迟时间 */
+        animation: test 1s ease-in-out infinite alternate 1s;
+      }
+
+      @keyframes test {
+        0% {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+        }
+
+        50% {
+          width: 200px;
+          height: 100px;
+          background-color: lightblue;
+        }
+
+        100% {
+          width: 200px;
+          height: 200px;
+          background-color: #008c8c;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
