@@ -30,13 +30,25 @@
       .nav {
         flex: 1 0 auto;
         margin-left: 20px;
+
+        /* 子元素：a元素有空白折叠————》用flex布局 */
+        display: flex;
       }
-      a {
+      
+      /* a { */
+      /* 需要缩小范围 */
+      .nav a,
+      .personal a {
         margin: 0 10px;
       }
 
       a.active {
         color: #eecf68;
+      }
+
+      /* 子元素：a元素有空白折叠————》用flex布局 */
+      .personal {
+        display: flex;
       }
     </style>
   </head>
