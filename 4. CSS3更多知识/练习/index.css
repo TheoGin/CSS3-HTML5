@@ -9,20 +9,29 @@ a {
   text-decoration: none;
 }
 
-.one-page,
-.two-page {
-  width: 100vw;
+/* .container {
+  scroll-behavior: smooth;
+} */
+ /* 滚动条在谁那就给谁加 */
+ html {
+  scroll-behavior: smooth;
+ }
+
+.page {
+  /* 宽度默认就是撑满 */
+  /* width: 100vw; */
+
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.one-page {
+.page1 {
   background-color: #579ef8;
 }
 
-.two-page {
+.page2 {
   background-color: #dda450;
 }
 
@@ -88,17 +97,26 @@ i.iconfont {
   margin-top: 20px;
 
   text-align: center;
+
+  /* 伪元素相对定位的是其父元素 */
+  position: relative;
 }
 
 .word::before {
   content: "";
   position: absolute;
-  left: 155px;
-  top: 8px;
+  /* left: 155px; */
+  /* 父元素的一半 */
+  left: 50%;
+  top: -15px;
   width: 0;
   height: 0;
   border: 15px solid transparent;
   border-left-color: #fff;
+
+  /* 可以单独设置留下那个边框的宽度 */
+  /* border-left-width: 15px; */
+
   transform: rotate(45deg);
 }
 
@@ -120,8 +138,13 @@ i.iconfont {
   transition: .2s;
 }
 
+/* a元素独占一行可以用display: block; */
+/* .right-fixed a {
+  display: block;
+} */
+
 .right-fixed a:first-child {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .right-fixed:hover {
